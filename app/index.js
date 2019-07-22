@@ -10,45 +10,38 @@ const Posts = React.lazy(() => import('./components/Posts'))
 const Post = React.lazy(() => import('./components/Post'))
 const User = React.lazy(() => import('./components/User'))
 
-class App extends React.Component {
-  state = {
-    theme: 'light',
-    toggleTheme: () => {
-      this.setState(({ theme }) => ({
-        theme: theme === 'light' ? 'dark' : 'light'
-      }))
-    }
-  }
-  render() {
-    return (
-      <Router>
-        <ThemeProvider value={this.state}>
-          <div className={this.state.theme}>
-            <div className='container'>
-              <Nav />
+function App () {
+  const [theme, setTheme] = React.useState('light')
+  const toggleTheme = () => setTheme((t) => t === 'light' ? 'dark' : 'light')
 
-              <React.Suspense fallback={<Loading />}>
-                <Switch>
-                  <Route
-                    exact
-                    path='/'
-                    render={() => <Posts type='top' />}
-                  />
-                  <Route
-                    path='/new'
-                    render={() => <Posts type='new' />}
-                  />
-                  <Route path='/post' component={Post} />
-                  <Route path='/user' component={User} />
-                  <Route render={() => <h1>404</h1>} />
-                </Switch>
-              </React.Suspense>
-            </div>
+  return (
+    <Router>
+      <ThemeProvider value={theme}>
+        <div className={theme}>
+          <div className='container'>
+            <Nav toggleTheme={toggleTheme} />
+
+            <React.Suspense fallback={<Loading />}>
+              <Switch>
+                <Route
+                  exact
+                  path='/'
+                  render={() => <Posts type='top' />}
+                />
+                <Route
+                  path='/new'
+                  render={() => <Posts type='new' />}
+                />
+                <Route path='/post' component={Post} />
+                <Route path='/user' component={User} />
+                <Route render={() => <h1>404</h1>} />
+              </Switch>
+            </React.Suspense>
           </div>
-        </ThemeProvider>
-      </Router>
-    )
-  }
+        </div>
+      </ThemeProvider>
+    </Router>
+  )
 }
 
 ReactDOM.render(
