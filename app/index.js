@@ -8,7 +8,7 @@ import Nav from "./components/Nav";
 
 const Posts = React.lazy(() => import("./components/Posts"));
 const Post = React.lazy(() => import("./components/Post"));
-// const User = React.lazy(() => import("./components/User"));
+const User = React.lazy(() => import("./components/User"));
 
 const App = () => {
   const [theme, setTheme] = React.useState("light");
@@ -35,7 +35,7 @@ const App = () => {
                 <Route exact path="/" render={() => <Posts type="top" />} />
                 <Route path="/new" render={() => <Posts type="new" />} /> */}
                 <Route path="/post" component={Post} />
-                {/* <Route path="/user" component={User} /> */}
+                <Route path="/user" component={User} />
                 <Route render={() => <h1>404</h1>} />
               </Switch>
             </React.Suspense>
