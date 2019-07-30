@@ -6,7 +6,7 @@ import ThemeContext from "./contexts/theme";
 import Loading from "./components/Loading";
 import Nav from "./components/Nav";
 
-// const Posts = React.lazy(() => import("./components/Posts"));
+const Posts = React.lazy(() => import("./components/Posts"));
 const Post = React.lazy(() => import("./components/Post"));
 // const User = React.lazy(() => import("./components/User"));
 
@@ -32,7 +32,7 @@ const App = () => {
 
             <React.Suspense fallback={<Loading />}>
               <Switch>
-                {/* <Route exact path="/" render={() => <Posts type="top" />} />
+                <Route exact path="/" render={() => <Posts type="top" />} />
                 <Route path="/new" render={() => <Posts type="new" />} /> */}
                 <Route path="/post" component={Post} />
                 {/* <Route path="/user" component={User} /> */}

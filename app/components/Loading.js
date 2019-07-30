@@ -19,11 +19,13 @@ const Loading = props => {
 
   React.useEffect(() => {
     interval.current = window.setInterval(() => {
-      content === text + "..." ? setContent(c => c) : setContent(c => c + ".");
+      content === text + "..."
+        ? setContent(text => text)
+        : setContent(text => text + ".");
     }, speed);
 
     return () => window.clearInterval(interval.current);
-  }, [speed]);
+  }, [content]);
 
   return <p style={styles.content}>{content}</p>;
 };

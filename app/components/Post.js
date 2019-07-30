@@ -17,7 +17,7 @@ const reducer = (state, action) => {
     return {
       ...state,
       comments: action.data,
-      loadingPost: false
+      loadingComments: false
     };
   } else if (action.type == "error") {
     this.setState({
