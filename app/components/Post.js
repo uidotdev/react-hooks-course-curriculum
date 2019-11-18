@@ -59,7 +59,7 @@ export default class Post extends React.Component {
         {loadingComments === true
           ? loadingPost === false && <Loading text='Fetching comments' />
           : <React.Fragment>
-              {this.state.comments.map((comment) =>
+              {comments.map((comment) =>
                 <Comment
                   key={comment.id}
                   comment={comment}
