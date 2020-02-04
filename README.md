@@ -9,7 +9,7 @@
 
 This is the repository for TylerMcGinnis.com's "React Hooks" course curriculum project.
 
-For more information on the course, visit __[tm.dev/courses/react-hooks](https://tm.dev/courses/react-hooks/)__.
+For more information on the course, visit __[tm.dev/courses/react-hooks](https://ui-hacker-news.netlify.com/)__.
 
 ### Assignment
 
