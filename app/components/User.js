@@ -5,7 +5,7 @@ import Loading from './Loading'
 import { formatDate } from '../utils/helpers'
 import PostsList from './PostsList'
 
-export default class Post extends React.Component {
+export default class User extends React.Component {
   state = {
     user: null,
     loadingUser: true,
