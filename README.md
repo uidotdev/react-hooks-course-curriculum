@@ -7,13 +7,13 @@
   <br />
 </h1>
 
-<h3 align="center">React Hooks Course Curriculum - <a href="https://tm.dev/react-course-curriculum/">Hacker News Clone</a></h3>
+<h3 align="center">React Hooks Course Curriculum - <a href="http://hn.ui.dev/">Hacker News Clone</a></h3>
 
 ### Info
 
-This is the repository for TylerMcGinnis.com's "React Hooks" course curriculum project.
+This is the repository for UI.dev's "React Hooks" course curriculum project.
 
-For more information on the course, visit __[tm.dev/courses/react-hooks](https://ui-hacker-news.netlify.com/)__.
+For more information on the course, visit __[ui.dev/react-hooks/](https://ui.dev/react-hooks/)__.
 
 ### Assignment
 
@@ -21,7 +21,7 @@ Clone this repo and refactor it to use React Hooks. The starter code is located 
 
 ### Project
 
-This is a (soft) "Hacker News" clone. You can view the final project at __[tm.dev/react-course-curriculum](https://tm.dev/react-course-curriculum/)__. 
+This is a (soft) "Hacker News" clone. You can view the final project at __[hn.ui.dev/](http://hn.ui.dev/)__. 
 
 ### Solution
 
